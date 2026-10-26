@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Connection to the PyScript -->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.3.1/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2024.3.1/core.js"></script>
+
+    <!-- Connection to the Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
+    <title>Social Studies Club Directory</title>
+
+    <!-- CSS because we wanna be extra -->
+    <style>
+
+        body {
+            background-color: #faf9f9;
+            font-family: Georgia, 'Times New Roman', Times, serif, sans-serif;
+            display: flex;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: url('https://c4.wallpaperflare.com/wallpaper/156/999/732/haikyuu-haikyuu-hd-wallpaper-preview.jpg');
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            position: relative;
+        }
+
+
+        .container {
+            max-width: 700px;
+            background-color: #faf9f9;
+        }
+
+        .club-card {
+            background-color: #ffa162;
+            border-radius: 15px;
+            padding: 30px;
+            border: 2px dashed rgb(0, 0, 0);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #e25809;
+        }
+
+        #output {
+            background-color: #e25809;
+            color: #ffffff;
+        }
+
+        .btn-primary {
+            background-color:#e25809;
+            border-color: #e25809;
+        }
+
+        .btn-primary:hover {
+            border: 2px rgb(0, 0, 0);
+            background-color: #e25809;
+            border-color: #000000;
+        }
+ 
+
+        footer {
+            width: 100%;
+            text-align: center;
+            color: #e25809;
+            background-color: #faf9f9;
+            padding: 12px 10px;
+            margin-top: auto;
+            box-sizing: border-box;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5 mb-5">
+        <div class="club-card">
+            <h1 class="text-center mb-3">Volleyball Varsity🏐</h1>
+            <h4 class="text-center mb-4">Club Member Checker🌟</h4>
+
+            <!-- Text input box to put the new members name -->
+            <form class="mb-4">
+                <div class="mb-3">
+                    <input
+                        type="text"
+                        id="first_name"
+                        class="form-control"
+                        placeholder="Enter the first name"
+                    >
+                </div>
+
+                <div class="mb-3">
+                    <input
+                        type="text"
+                        id="last_name"
+                        class="form-control"
+                        placeholder="Enter the last name"
+                    >
+                </div>
+
+                <input
+                    type="button"
+                    value="ENTER"
+                    py-click="candidate_checker"
+                    class="btn btn-primary"
+                >
+            </form> 
+
+            <!-- Check if the candidate is a member -->
+            <div id="output" class="p-3 rounded"></div>
+        </div>
+    </div>
+
+    <!-- Connection  to the Python file (modified so there wont be undefined values) -->
+    <script type="py" src="./main.py"></script>
+
+
+    <!-- Connection to Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <footer>
+        <p>@2026 Volleyball Club. By Antoinette Claire I. Faustino, 10-Emerald</p>
+    </footer>
+</body>
+</html>
